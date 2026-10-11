@@ -418,6 +418,7 @@ def test_mean_of_empty_raises():
     # so it catches errors with the wrong message.
 
 # Q3
+print("Running tests with pytest...")
 def mean(values: list[float]) -> float:
     """Calculate the average of a list of numbers."""
     if len(values) == 0:
@@ -439,13 +440,15 @@ def test_mean_values(values, expected):
     assert mean(values) == expected
 
 
-# Run: pytest warmup_01.py -v
-# Summary line: Paste the actual summary line from your pytest output here.
-# Example: 4 passed in 0.02s (your time may be different).
-#
-# One parametrized test with four cases is better because it avoids
-# repeating nearly identical test functions and makes it easier to
-# add more input/output cases in one place.
+# collected 6 items                                                                                                                                
+# warmup_01.py::test_celsius_to_fahrenheit PASSED                                                                                            [ 16%]
+# warmup_01.py::test_mean_of_empty_raises PASSED                                                                                             [ 33%]
+# warmup_01.py::test_mean_values[values0-4.0] PASSED                                                                                         [ 50%]
+# warmup_01.py::test_mean_values[values1-10.0] PASSED                                                                                        [ 66%]
+# warmup_01.py::test_mean_values[values2--3.0] PASSED                                                                                        [ 83%]
+# warmup_01.py::test_mean_values[values3-2.5] PASSED                                                                                         [100%]
+
+# =============================================================== 6 passed in 0.11s ================================================================
 
 # Q4
 def celsius_to_fahrenheit(celsius: float) -> float:
@@ -459,14 +462,17 @@ def test_celsius_to_fahrenheit():
     assert celsius_to_fahrenheit(37) == pytest.approx(98.6)
 
 
-# Example failure output when running: pytest warmup_01.py -v
-#
-# FAILED test_celsius_to_fahrenheit
-# assert 257.0 == 212
-#  + where 257.0 = celsius_to_fahrenheit(100)
-#
-# Pytest shows the expected value (212) and the actual value (257.0).
-
 def celsius_to_fahrenheit(celsius: float) -> float:
     """Convert Celsius to Fahrenheit."""
     return (celsius * 9 / 5) + 32
+
+# collected 6 items                                                                                                                                
+
+# warmup_01.py::test_celsius_to_fahrenheit PASSED                                                                                            [ 16%]
+# warmup_01.py::test_mean_of_empty_raises PASSED                                                                                             [ 33%]
+# warmup_01.py::test_mean_values[values0-4.0] PASSED                                                                                         [ 50%]
+# warmup_01.py::test_mean_values[values1-10.0] PASSED                                                                                        [ 66%]
+# warmup_01.py::test_mean_values[values2--3.0] PASSED                                                                                        [ 83%]
+# warmup_01.py::test_mean_values[values3-2.5] PASSED                                                                                         [100%]
+
+# =============================================================== 6 passed in 0.11s ================================================================
