@@ -1,3 +1,6 @@
+from weatherkit.records import HourlyReading
+from weatherkit.summarize import DailyAggregator
+
 
 def test_incomplete_day_is_dropped(sample_readings):
     aggregator = DailyAggregator(min_hours=3)
