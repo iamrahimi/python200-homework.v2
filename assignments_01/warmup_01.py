@@ -461,18 +461,16 @@ def test_celsius_to_fahrenheit():
     assert celsius_to_fahrenheit(100) == 212
     assert celsius_to_fahrenheit(37) == pytest.approx(98.6)
 
+# ==================================================================== FAILURES ====================================================================
+# ___________________________________________________________ test_celsius_to_fahrenheit ___________________________________________________________
 
-def celsius_to_fahrenheit(celsius: float) -> float:
-    """Convert Celsius to Fahrenheit."""
-    return (celsius * 9 / 5) + 32
+#     def test_celsius_to_fahrenheit():
+#         assert celsius_to_fahrenheit(0) == 32
+# >       assert celsius_to_fahrenheit(100) == 212
+# E       assert 257.0 == 212
+# E        +  where 257.0 = celsius_to_fahrenheit(100)
 
-# collected 6 items                                                                                                                                
-
-# warmup_01.py::test_celsius_to_fahrenheit PASSED                                                                                            [ 16%]
-# warmup_01.py::test_mean_of_empty_raises PASSED                                                                                             [ 33%]
-# warmup_01.py::test_mean_values[values0-4.0] PASSED                                                                                         [ 50%]
-# warmup_01.py::test_mean_values[values1-10.0] PASSED                                                                                        [ 66%]
-# warmup_01.py::test_mean_values[values2--3.0] PASSED                                                                                        [ 83%]
-# warmup_01.py::test_mean_values[values3-2.5] PASSED                                                                                         [100%]
-
-# =============================================================== 6 passed in 0.11s ================================================================
+# warmup_01.py:461: AssertionError
+# ============================================================ short test summary info =============================================================
+# FAILED warmup_01.py::test_celsius_to_fahrenheit - assert 257.0 == 212
+# ========================================================== 1 failed, 5 passed in 0.14s ===========================================================
