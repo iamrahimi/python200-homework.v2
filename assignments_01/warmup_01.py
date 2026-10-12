@@ -438,6 +438,7 @@ def mean(values: list[float]) -> float:
 def test_mean_values(values, expected):
     assert mean(values) == expected
 
+# Parametrization avoids duplicated test code while checking each case separately.
 
 # collected 6 items                                                                                                                                
 # warmup_01.py::test_celsius_to_fahrenheit PASSED                                                                                            [ 16%]
