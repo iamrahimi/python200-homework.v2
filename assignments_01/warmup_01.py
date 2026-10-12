@@ -413,9 +413,8 @@ def test_mean_of_empty_raises():
     with pytest.raises(ValueError, match="empty"):
         mean([])
 
-# One parametrized test is better than four nearly identical test functions
-# because it avoids repeated code and checks multiple inputs consistently.
-# It is also easier to add new test cases and maintain the tests.
+# Using match="empty" checks the exception message, not just its type.
+# Without match=, pytest would pass even if ValueError had the wrong message.
 
 # Q3
 print("Running tests with pytest...")
