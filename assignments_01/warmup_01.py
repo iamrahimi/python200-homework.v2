@@ -453,7 +453,7 @@ def test_mean_values(values, expected):
 # Q4
 def celsius_to_fahrenheit(celsius: float) -> float:
     """Convert Celsius to Fahrenheit."""
-    return (celsius * 9 / 4) + 32  # Deliberately incorrect
+    return (celsius * 9 / 5) + 32  # Deliberately incorrect
 
 
 def test_celsius_to_fahrenheit():
