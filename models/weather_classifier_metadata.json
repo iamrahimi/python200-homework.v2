@@ -1,0 +1,17 @@
+{
+    "city": "Seattle, Washington",
+    "year": 2023,
+    "python_version": "3.13.13 (main, Apr  7 2026, 18:19:01) [Clang 21.0.0 (clang-2100.0.123.102)]",
+    "scikit_learn_version": "1.9.1",
+    "feature_names": [
+        "temperature_2m_max",
+        "temperature_2m_min",
+        "precipitation_sum",
+        "wind_speed_10m_max"
+    ],
+    "label_rule": "good=1 when temperature_2m_max is between 7 and 26\u00b0C inclusive, temperature_2m_min >= 0\u00b0C, precipitation_sum < 3 mm, and wind_speed_10m_max < 30 km/h; otherwise skip=0.",
+    "good_label": 1,
+    "skip_label": 0,
+    "test_accuracy": 0.8767123287671232,
+    "test_f1": 0.9010989010989011
+}
