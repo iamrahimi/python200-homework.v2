@@ -294,8 +294,8 @@ print("False negatives:", false_negatives)
 
 print("\n--- joblib Q1 ---")
 
-joblib.dump(pipeline, "assignments_03/models/warmup_model.pkl")
-loaded = joblib.load("assignments_03/models/warmup_model.pkl")
+joblib.dump(pipeline, "assignments_03/models/weather_classifier.pkl")
+loaded = joblib.load("assignments_03/models/weather_classifier.pkl")
 
 assert (loaded.predict(X_test) == pipeline.predict(X_test)).all()
 
