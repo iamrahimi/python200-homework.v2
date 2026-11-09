@@ -292,6 +292,7 @@ print("Prompt Q6 prose passage:", get_text(response))
 # These models utilize deep learning techniques, specifically neural networks, to predict and produce coherent and contextually relevant language based on the input they receive.
 # """
 
+# My observations:
 # I noticed that both responses explain that large language models learn from text
 # and generate human-like responses. The first response is shorter and gives examples
 # of what LLMs can do, while the OpenAI response explains a little more about how
