@@ -1,5 +1,3 @@
-"""AI-powered job application helper for the CTD 200.2 mini-project."""
-
 import json
 
 from dotenv import load_dotenv
@@ -225,15 +223,12 @@ def run_chatbot():
             messages.append({"role": "assistant", "content": reply})
 
 
-# --- Task 6: Ethics Reflection ---
-# Chosen format: Option A — Comment block.
-# A model may reflect biases in the text it learned from, which could favor some
-# industries, writing styles, or cultural norms over others. A job seeker could
-# submit an inaccurate or generic draft if they do not check it carefully, which
-# is why this helper asks users to review and edit every draft. A professional
-# version should clearly explain its limits and avoid inventing experience or
-# credentials. It should also let users control what personal information they
-# share and provide a way to report harmful or biased suggestions.
+# Ethics Reflection — Option A: Comment block
+# The bot may give biased advice because its training text may favor certain
+# industries, communication styles, or cultural backgrounds. If someone submits
+# its writing without reviewing it, the bot could include incorrect details or
+# make their application sound generic. A professional version should remind
+# users to review every draft and should never invent experience or achievements.
 
 
 if __name__ == "__main__":

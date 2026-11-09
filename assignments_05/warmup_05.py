@@ -1,5 +1,3 @@
-"""CTD 200.2 warmup exercises for the OpenAI Chat Completions API."""
-
 import json
 
 from dotenv import load_dotenv
