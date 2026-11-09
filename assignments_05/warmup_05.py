@@ -283,18 +283,21 @@ print("Prompt Q6 prose passage:", get_text(response))
 
 # Ollama Q1
 # Run in a terminal:
-# A large language model is a type of artificial intelligence system that can understand and generate human-like text, trained on vast amounts of 
-# data to learn patterns and improve performance. It excels at tasks like writing essays, answering questions, or creating content by analyzing and 
-# processing this data.  
-
 # In two sentences, I can explain: "Large language models are AI systems that process and generate human-like text, trained on massive datasets to 
 # understand and create language. They can understand complex patterns and generate text, making them powerful for tasks like writing or answering 
 # questions."
 
-# Paste the output from your Ollama terminal run here:
 # """
-# [Paste the actual Ollama output here.]
+# Ollama Q1 OpenAI response: A large language model (LLM) is an artificial intelligence system designed to understand and generate human-like text by analyzing vast amounts of written data. 
+# These models utilize deep learning techniques, specifically neural networks, to predict and produce coherent and contextually relevant language based on the input they receive.
 # """
+
+# I noticed that both responses explain that large language models learn from text
+# and generate human-like responses. The first response is shorter and gives examples
+# of what LLMs can do, while the OpenAI response explains a little more about how
+# they work, including neural networks. One advantage of running a model locally is
+# that I can use it without sending my prompts to an online service. One disadvantage
+# is that it can use a lot of computer memory and may not be as powerful as an online model.
 
 ollama_comparison_prompt = (
     "Explain what a large language model is in two sentences."
