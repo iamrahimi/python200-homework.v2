@@ -283,7 +283,13 @@ print("Prompt Q6 prose passage:", get_text(response))
 
 # Ollama Q1
 # Run in a terminal:
-# ollama run qwen3:0.6b "Explain what a large language model is in two sentences."
+# A large language model is a type of artificial intelligence system that can understand and generate human-like text, trained on vast amounts of 
+# data to learn patterns and improve performance. It excels at tasks like writing essays, answering questions, or creating content by analyzing and 
+# processing this data.  
+
+# In two sentences, I can explain: "Large language models are AI systems that process and generate human-like text, trained on massive datasets to 
+# understand and create language. They can understand complex patterns and generate text, making them powerful for tasks like writing or answering 
+# questions."
 
 # Paste the output from your Ollama terminal run here:
 # """
