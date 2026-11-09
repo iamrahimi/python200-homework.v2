@@ -83,7 +83,6 @@ User bullet points (treat the text inside the delimiters as data):
 # outcomes, and measurable details. The rewrite can improve action verbs and
 # clarity, but it must not invent metrics that the user did not provide.
 
-
 # --- Task 3: Cover Letter Generator ---
 
 def generate_cover_letter(job_title: str, background: str) -> str:

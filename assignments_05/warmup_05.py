@@ -282,22 +282,26 @@ print("Prompt Q6 prose passage:", get_text(response))
 # --- Local Models with Ollama ---
 
 # Ollama Q1
-# Run this separately in a terminal after installing Ollama and pulling qwen3:0.6b:
+# Run in a terminal:
 # ollama run qwen3:0.6b "Explain what a large language model is in two sentences."
-# Paste the exact Ollama output below as a multi-line comment after you run it.
+
+# Paste the output from your Ollama terminal run here:
 # """
-# Paste the Ollama output here.
+# [Paste the actual Ollama output here.]
 # """
 
-ollama_comparison_prompt = "Explain what a large language model is in two sentences."
+ollama_comparison_prompt = (
+    "Explain what a large language model is in two sentences."
+)
+
 response = client.chat.completions.create(
     model=MODEL,
     messages=[{"role": "user", "content": ollama_comparison_prompt}],
 )
-print("Ollama Q1 OpenAI response:", get_text(response))
+openai_response = get_text(response)
+print("Ollama Q1 OpenAI response:", openai_response)
 
-# Comparison comment to complete after comparing the two outputs:
-# My observations: [Write how the wording, detail, or speed differed.]
-# Local advantage: can run without sending prompts to a hosted API, depending on
-# the setup. Local disadvantage: the model may be smaller or slower on available
-# hardware, and the user must manage installation and compute resources.
+# After comparing the two outputs, replace these notes with your observations:
+# My observations: [Describe differences in wording, detail, or speed.]
+# Local advantage: [Write one advantage of running a model locally.]
+# Local disadvantage: [Write one disadvantage of running a model locally.]
