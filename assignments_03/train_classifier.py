@@ -241,10 +241,10 @@ print(f"Logistic regression F1: {logreg_f1:.3f}")
 
 print("\n--- Task 6: Save the Model ---")
 
-os.makedirs("models", exist_ok=True)
+os.makedirs("assignments_03/models", exist_ok=True)
 
-model_path = "models/weather_classifier.pkl"
-metadata_path = "models/weather_classifier_metadata.json"
+model_path = "assignments_03/models/weather_classifier.pkl"
+metadata_path = "assignments_03/models/weather_classifier_metadata.json"
 
 joblib.dump(logreg_model, model_path)
 
