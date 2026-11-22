@@ -10,7 +10,6 @@ from llama_index.llms.openai import OpenAI
 
 # --- Step 1: Setup ---
 
-# Load the .env file located next to this script.
 # Load environment variables from .env
 load_dotenv()
 
