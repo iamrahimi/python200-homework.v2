@@ -145,13 +145,11 @@ print("Selected document:", result[0][0])
 
 # --- LlamaIndex ---
 # Set BRIGHTLEAF_PDF_DIR if your lesson PDFs are in a different location.
-# This default assumes the repo contains 06_AI_augmentation/resources/brightleaf_pdfs
-# beside assignments_06/.
-REPO_ROOT = Path(__file__).resolve().parent.parent
+# The provided BrightLeaf PDFs are kept in assignments_06/resources/brightleaf_pdfs.
 BRIGHTLEAF_PDF_DIR = Path(
     os.getenv(
         "BRIGHTLEAF_PDF_DIR",
-        str(REPO_ROOT / "assignments_06" / "resources" / "brightleaf_pdfs"),
+        str(Path(__file__).resolve().parent / "resources" / "brightleaf_pdfs"),
     )
 )
 
@@ -211,9 +209,20 @@ def run_llamaindex_exercises():
         print(f"\nQuestion: {question}")
         print("Answer:", response)
         show_retrieved_nodes(response)
-    # Review the output: Are the sources relevant? Does the response sound
-    # confident/specific or cautious? Did any unrelated chunk appear?
-    # Record observations here after running against the lesson's PDFs.
+    # Q1 benefits-query observations, grounded in the supplied PDFs:
+    # employee_benefits.pdf directly answers this question with health, vision,
+    # wellness, retirement, parental-leave, flexibility, and career-growth details.
+    # Retrieved chunks from that file are relevant; the answer can be specific
+    # because the document gives concrete benefits and amounts. Check the printed
+    # response for its exact tone and note any unexpected source nodes after your run.
+    #
+    # Q1 security-query observations, grounded in the supplied PDFs:
+    # security_policy.pdf directly covers MFA, VPN, encryption, incident response,
+    # training, access reviews, and physical safeguards. Chunks from that file are
+    # relevant, and the response can be specific because the policy lists controls.
+    # Check the printed answer's exact tone and note any unrelated nodes after your run.
+    # These relevance notes describe the source contents; exact retrieved nodes
+    # and model wording depend on running with your local API key and index.
 
     # LlamaIndex Question 2
     question = questions[0]
